@@ -11,5 +11,9 @@ app.get("/",(req,res)=>{
 app.get("/test",(req,res)=>{
   console.log("test de rama secondary")
 })
+
+app.get("/login",(req,ees)=>{
+  console.log("Login incorrecto");
+})
 app.listen(PORT,()=>console.log("coneccion establecida con exito"));
 
