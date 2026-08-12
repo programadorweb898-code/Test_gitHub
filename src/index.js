@@ -1,19 +1,17 @@
 import express from "express";
-import dotenv from "dotenv";
-dotenv.config();
 
-const PORT=process.env.PORT || 4000;
 const app=express();
 app.get("/",(req,res)=>{
-  console.log("test con exito")
+  res.send("test exitoso");
 });
 
 app.get("/test",(req,res)=>{
-  console.log("test de rama secondary")
+  res.status(200).send("test de rama secondary")
+});
+
+app.get("/login",(req,res)=>{
+  res.status(401).send("Login incorrecto");
 })
 
-app.get("/login",(req,ees)=>{
-  console.log("Login incorrecto");
-})
-app.listen(PORT,()=>console.log("coneccion establecida con exito"));
+export default app;
 
