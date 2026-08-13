@@ -2,7 +2,7 @@ import express from "express";
 
 const app=express();
 app.get("/",(req,res)=>{
-  res.send("test exitoso en esta respuesta");
+  res.send("test exitoso");
 });
 
 app.get("/test",(req,res)=>{
