@@ -14,5 +14,5 @@ test("GET /test responde correctamente", async () => {
 test("GET /login devuelve 401", async () => {
   const response = await request(app).get("/login");
 
-  expect(response.status).toBe(200);
+  expect(response.status).toBe(401);
 });
